@@ -1,0 +1,105 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.ToDo{
+  position: relative;
+  height: 70vh;
+  width: 60vw;
+  padding: 20px 20px;
+  background-color: #242424;
+}
+.ToDo::before{
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  left: -2px;
+  top: -2px;
+  background: #020024;
+background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(230, 0, 255, 1) 100%);
+  z-index: -1;
+}
+
+#taskInput {
+  padding: 1.3em;
+  border: none;
+  border-radius: 25px 0 0 25px;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-size: medium;
+}
+#taskInput ~ button {
+  position: relative;
+  left: -20px;
+  padding: 1.2em;
+  font-size: medium;
+  background-color: rgba(230, 0, 255, 1);
+  border-radius: 25px;
+}
+.tasks{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0.4em;
+}
+.tasks .task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2em;
+  background-color: #1a1a1a;
+  border-radius: 25px;
+}
+.task label{
+  position: relative;
+}
+.tasks .task .checkbox{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+.task label span {
+  position: absolute;
+  left: 0;
+  transform: translateY(-50%);
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  border: 2px solid rgba(230, 0, 255, 1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.task label input:checked ~ span {
+  background-color: rgba(230, 0, 255, 1);
+}
+.task label span::after {
+  content: "";
+  position: absolute;
+  border: solid white;
+  border-width: 0 0.2em 0.2em 0;
+  transform: rotate(45deg);
+  width: 0.5em;
+  height: 1em;
+  left: 0.7em;
+  top: 0.3em;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.task label input:checked ~ span::after {
+  opacity: 1;
+}
+.tasks .task .deleteButton{
+  border: none;
+}
+.tasks .task .deleteButton:hover > span{
+  filter:saturate(2);
+  cursor: pointer;
+}
