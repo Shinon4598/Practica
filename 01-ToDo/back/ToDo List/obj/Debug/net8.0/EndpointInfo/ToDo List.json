@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/TodoApi": {
+    "/api/todo": {
       "get": {
         "tags": [
           "TodoApi"
@@ -89,7 +89,7 @@
         }
       }
     },
-    "/api/TodoApi/{id}": {
+    "/api/todo/{id}": {
       "get": {
         "tags": [
           "TodoApi"

@@ -9,7 +9,7 @@ using ToDo_List.Services;
 
 namespace ToDo_List.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/todo")]
     [ApiController]
     public class TodoApiController : ControllerBase
     {

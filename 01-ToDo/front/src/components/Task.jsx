@@ -1,12 +1,13 @@
-export default function Task({task, deleteTask}) {
+export default function Task({title, isCompleted, id, onDelete, onUpdate}) {
+
     return (
         <li className='task'>
             <label>
-                <input className='checkbox' type="checkbox" />
+                <input className='checkbox' type="checkbox"  checked={isCompleted || false} onChange={()=>onUpdate(id)} />
                 <span className='checkboxText'></span>
             </label>
-            <p>{task}</p>
-            <button className='deleteButton' onClick={deleteTask}>✖️</button>
+            <p>{title}</p>
+            <button className='deleteButton' onClick={()=>onDelete(id)}>✖️</button>
         </li>
     )
 }

@@ -2,7 +2,7 @@
   {
     "ContainingType": "ToDo_List.Controllers.TodoApiController",
     "Method": "GetAllTasks",
-    "RelativePath": "api/TodoApi",
+    "RelativePath": "api/todo",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -22,7 +22,7 @@
   {
     "ContainingType": "ToDo_List.Controllers.TodoApiController",
     "Method": "AddTask",
-    "RelativePath": "api/TodoApi",
+    "RelativePath": "api/todo",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -48,7 +48,7 @@
   {
     "ContainingType": "ToDo_List.Controllers.TodoApiController",
     "Method": "GetTaskById",
-    "RelativePath": "api/TodoApi/{id}",
+    "RelativePath": "api/todo/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -74,7 +74,7 @@
   {
     "ContainingType": "ToDo_List.Controllers.TodoApiController",
     "Method": "UpdateTask",
-    "RelativePath": "api/TodoApi/{id}",
+    "RelativePath": "api/todo/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -95,7 +95,7 @@
   {
     "ContainingType": "ToDo_List.Controllers.TodoApiController",
     "Method": "DeleteTask",
-    "RelativePath": "api/TodoApi/{id}",
+    "RelativePath": "api/todo/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
