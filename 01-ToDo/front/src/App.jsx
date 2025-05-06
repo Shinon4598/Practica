@@ -1,25 +1,15 @@
-import { useEffect, useState } from 'react'
 import './App.css'
-import Task from './components/Task';
-import { getTasks, createTask, updateTask, deleteTask } from './Api/ToDoApi';
+import { useTasks} from './CustomHooks/useTasks';
+import ToDo from './components/ToDo';
 function App() {
-  
+
+  const {loading, error} = useTasks();
   return (
-    <div className='ToDo'>
-      <h1>To-Do list 📑</h1>
-      <form onSubmit={handleSubmit}>
-          <input type="text"  id='taskInput' placeholder='Ingrese una tarea'/>
-          <button type='submit'>Agregar</button>
-      </form>
-      <ul className='tasks'>
-        {
-          tasks && tasks.map
-          (t => 
-          (<Task key={t.id} title={t.name} isCompleted={t.isCompleted} id={t.id} onUpdate={handleUpdate} onDelete={handleDelete}></Task> )
-          )
-        }
-      </ul>
-    </div>
+    <>
+      {loading && <h1>Loading...</h1>}
+      {error && <h1>{error}</h1>}
+      {!loading && !error && <ToDo />}
+    </>
   )
 }
 

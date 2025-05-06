@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Notebook\\Desktop\\codigo\\Practica\\01-ToDo\\back\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{12117881-0106-49F6-9682-217D747D9C05}|ToDo List\\ToDo List.csproj|c:\\users\\notebook\\desktop\\codigo\\practica\\01-todo\\back\\todo list\\controllers\\todoapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12117881-0106-49F6-9682-217D747D9C05}|ToDo List\\ToDo List.csproj|solutionrelative:todo list\\controllers\\todoapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{12117881-0106-49F6-9682-217D747D9C05}|ToDo List\\ToDo List.csproj|c:\\users\\notebook\\desktop\\codigo\\practica\\01-todo\\back\\todo list\\models\\dto\\taskupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12117881-0106-49F6-9682-217D747D9C05}|ToDo List\\ToDo List.csproj|solutionrelative:todo list\\models\\dto\\taskupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12117881-0106-49F6-9682-217D747D9C05}|ToDo List\\ToDo List.csproj|c:\\users\\notebook\\desktop\\codigo\\practica\\01-todo\\back\\todo list\\controllers\\todoapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12117881-0106-49F6-9682-217D747D9C05}|ToDo List\\ToDo List.csproj|solutionrelative:todo list\\controllers\\todoapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{12117881-0106-49F6-9682-217D747D9C05}|ToDo List\\ToDo List.csproj|c:\\users\\notebook\\desktop\\codigo\\practica\\01-todo\\back\\todo list\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,11 +22,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "TaskUpdateDTO.cs",
               "DocumentMoniker": "C:\\Users\\Notebook\\Desktop\\codigo\\Practica\\01-ToDo\\back\\ToDo List\\Models\\dto\\TaskUpdateDTO.cs",
               "RelativeDocumentMoniker": "ToDo List\\Models\\dto\\TaskUpdateDTO.cs",
@@ -39,16 +39,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TodoApiController.cs",
               "DocumentMoniker": "C:\\Users\\Notebook\\Desktop\\codigo\\Practica\\01-ToDo\\back\\ToDo List\\Controllers\\TodoApiController.cs",
               "RelativeDocumentMoniker": "ToDo List\\Controllers\\TodoApiController.cs",
               "ToolTip": "C:\\Users\\Notebook\\Desktop\\codigo\\Practica\\01-ToDo\\back\\ToDo List\\Controllers\\TodoApiController.cs",
               "RelativeToolTip": "ToDo List\\Controllers\\TodoApiController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAowAsAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T19:02:17.058Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T19:02:17.058Z"
             },
             {
               "$type": "Document",
