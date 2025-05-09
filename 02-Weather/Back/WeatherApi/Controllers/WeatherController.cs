@@ -20,7 +20,7 @@ namespace WeatherApi.Controllers
             return Ok(cities);
         }
         [HttpGet("Weather")]
-        public async Task<IActionResult> GetWeather([FromQuery]double lat, [FromQuery]double lon)
+        public async Task<IActionResult> GetWeather(double lat, double lon)
         {
             var weather = await _weatherService.GetWeatherAsync(lat, lon);
             if (weather == null) return NotFound("No se encontró clima para esas coordenadas");

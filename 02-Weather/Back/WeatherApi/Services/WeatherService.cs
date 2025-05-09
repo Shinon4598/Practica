@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using Microsoft.AspNetCore.Mvc;
 using WeatherApi.Models;
 
 namespace WeatherApi.Services
@@ -18,8 +19,16 @@ namespace WeatherApi.Services
             var client = _httpClient.CreateClient();
             var apiKey = _configuration["OpenWeatherMap:ApiKey"];
             var url = $"http://api.openweathermap.org/geo/1.0/direct?q={city}&limit=5&appid={apiKey}";
-            var response = await client.GetFromJsonAsync<List<LocationResult>>(url);
-            return response ?? Enumerable.Empty<LocationResult>();
+            var response = await client.GetFromJsonAsync<List<JsonElement>>(url);
+            var locations = response?.Select(x => new LocationResult
+            {
+                Name = x.GetProperty("name").GetString(),
+                Country = x.GetProperty("country").GetString(),
+                State = x.TryGetProperty("state", out var state) ? state.GetString() : null,
+                Lat = x.GetProperty("lat").GetDouble(),
+                Lon = x.GetProperty("lon").GetDouble()
+            }).ToList();
+            return locations ?? Enumerable.Empty<LocationResult>();
         }
 
         public async Task<WeatherResult> GetWeatherAsync(double lat, double lon)
@@ -34,7 +43,8 @@ namespace WeatherApi.Services
             {
                 City = response.GetProperty("name").GetString(),
                 Temperature = response.GetProperty("main").GetProperty("temp").GetDouble(),
-                Description = response.GetProperty("weather")[0].GetProperty("description").GetString()
+                Description = response.GetProperty("weather")[0].GetProperty("description").GetString(),
+                Icon = response.GetProperty("weather")[0].GetProperty("icon").GetString()
             } ?? new WeatherResult();
         }
     }
