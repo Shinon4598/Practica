@@ -1,7 +1,9 @@
 export const UbicationSelector = () => {
-    const { loader, callEndpoint } = useFetchAndLoad();
     return (
-        <>
-        </>
+        <div className="UbicationSelector">
+            <label htmlFor="ubicacion">Ubicación</label>
+            <input name="ubicacion" type="text" placeholder="Ubicación" />
+            <button>Enviar</button>
+        </div>
     )
 }

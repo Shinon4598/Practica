@@ -27,18 +27,31 @@ a:hover {
   color: #535bf2;
 }
 
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: calc(0.4em + 1vw);
+}
+@media (max-width: 768px) {
+  html, body{
+    font-size: calc(0.8em + 1vw);
+  }
+  
+}
 body {
   margin: 0;
   display: flex;
   place-items: center;
   place-content: center;
-  width: 100%;
-  height: 100%;
 }
 
 h1 {
   font-size: 3.2em;
-  line-height: 1.1;
+  font-weight: 500;
+  margin-bottom: 0.4em;
+  color: #fff;
 }
 
 b{
@@ -64,6 +77,55 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.UbicationSelector input{
+  padding: 20px 10px;
+  border-radius: 5px;
+  border: 1px solid #6a5cff;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #26274e;
+  color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.UbicationSelector input:focus {
+  border-color: #00d4ff; 
+  box-shadow: 0 0 8px #00d4ff; 
+  outline: none;
+}
+.UbicationSelector label {
+  font-size: 3em;
+  font-weight: 500;
+  color: #e5e9eb; 
+  margin-bottom: 0.4em;
+}
+.UbicationSelector button{
+  padding: 20px 10px;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background: linear-gradient(135deg, #6a5cff, #00d4ff); 
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.UbicationSelector button:hover, .UbicationSelector button:focus {
+  transform: scale(1.05); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+  outline: none;
+}
+.UbicationSelector button:active {
+  transform: scale(0.95); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  outline: none;
+}
+.UbicationSelector{
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
